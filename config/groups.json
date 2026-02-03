@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "groups": [
+    {
+      "group_id": "team-demo",
+      "name": "Team Demo",
+      "members": [
+        {"email": "alice@example.com", "name": "Alice", "enabled": true},
+        {"email": "bob@example.com", "name": "Bob", "enabled": true}
+      ]
+    }
+  ]
+}

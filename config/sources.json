@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "source_id": "example-rss",
+      "type": "rss",
+      "enabled": true,
+      "poll_interval_minutes": 60,
+      "params": {
+        "feed_url": "https://example.com/feed.xml",
+        "use_entry_published_date": true
+      }
+    },
+    {
+      "source_id": "example-website",
+      "type": "website_change",
+      "enabled": true,
+      "poll_interval_minutes": 120,
+      "params": {
+        "url": "https://example.com/blog",
+        "fetch_method": "requests",
+        "selectors": {
+          "content_css": "main",
+          "title_css": "title"
+        },
+        "normalisation": {
+          "remove_css": ["nav", "footer"],
+          "strip_whitespace": true
+        },
+        "diff": {
+          "method": "text",
+          "change_threshold_ratio": 0.1
+        }
+      }
+    },
+    {
+      "source_id": "example-gmail",
+      "type": "gmail_inbox",
+      "enabled": false,
+      "poll_interval_minutes": 180,
+      "params": {
+        "gmail_query": "label:newsletters newer_than:7d",
+        "parse_mode": "html",
+        "extract_links": true
+      }
+    }
+  ]
+}

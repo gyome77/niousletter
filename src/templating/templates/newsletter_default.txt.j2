@@ -1,0 +1,12 @@
+{{ newsletter.name }}
+Period: {{ period.start }} - {{ period.end }}
+
+Highlights:
+{% for item in items %}- {{ item.title }}: {{ item.summary }}
+{% endfor %}
+
+All Links:
+{% for link in all_links %}- {{ link }}
+{% endfor %}
+
+Unsubscribe: {{ unsubscribe_url }}

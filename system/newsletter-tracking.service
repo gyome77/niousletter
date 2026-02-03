@@ -1,0 +1,13 @@
+[Unit]
+Description=Newsletter Tracking Service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/var/lib/newsletter-engine
+EnvironmentFile=/etc/newsletter-engine/.env
+ExecStart=/var/lib/newsletter-engine/venv/bin/python -m src.app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

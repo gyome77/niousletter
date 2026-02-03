@@ -1,0 +1,9 @@
+[project]
+name = "newsletter-engine"
+version = "0.1.0"
+description = "Self-hosted newsletter engine"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.setuptools]
+packages = ["src"]

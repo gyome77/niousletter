@@ -1,0 +1,19 @@
+{
+  "templates": [
+    {
+      "template_id": "default",
+      "subject_format": "{newsletter_name} ({date_start} - {date_end})",
+      "jinja_html": "newsletter_default.html.j2",
+      "jinja_text": "newsletter_default.txt.j2",
+      "summary_rules": {
+        "style": "bullets",
+        "length": "medium",
+        "max_items": 20,
+        "include_links": true,
+        "link_style": "sectioned",
+        "language": "en-GB",
+        "tone": "factual"
+      }
+    }
+  ]
+}

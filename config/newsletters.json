@@ -1,0 +1,26 @@
+{
+  "newsletters": [
+    {
+      "newsletter_id": "demo-daily",
+      "name": "Demo Daily",
+      "group_id": "team-demo",
+      "template_id": "default",
+      "frequency": "daily",
+      "sources": ["example-rss", "example-website"],
+      "send_policy": {
+        "timezone": "Europe/Brussels",
+        "send_time_local": "08:30"
+      },
+      "selection_policy": {
+        "window_days": 2,
+        "max_items_total": 20,
+        "per_source_limit": 10,
+        "dedupe_across_sources": true
+      },
+      "tracking": {
+        "open_tracking": true,
+        "click_tracking": true
+      }
+    }
+  ]
+}

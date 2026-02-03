@@ -1,0 +1,13 @@
+[Unit]
+Description=Newsletter Scheduler
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/var/lib/newsletter-engine
+EnvironmentFile=/etc/newsletter-engine/.env
+ExecStart=/var/lib/newsletter-engine/venv/bin/python -m src.cli run-scheduler
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
