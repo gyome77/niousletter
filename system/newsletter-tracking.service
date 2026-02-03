@@ -4,9 +4,10 @@ After=network.target
 
 [Service]
 Type=simple
-WorkingDirectory=/var/lib/newsletter-engine
+WorkingDirectory=/opt/niousletter
 EnvironmentFile=/etc/newsletter-engine/.env
-ExecStart=/var/lib/newsletter-engine/venv/bin/python -m src.app
+Environment=PYTHONPATH=/opt/niousletter/pydeps/lib/python3.*/site-packages
+ExecStart=/usr/bin/python3 -m src.app
 Restart=always
 
 [Install]
